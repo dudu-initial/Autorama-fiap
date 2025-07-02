@@ -1,0 +1,214 @@
+:root {
+    --bg-color: #10111A;
+    --card-bg-color: #1E1F2C;
+    --text-color: #E0E0E0;
+    --primary-color: #A0A0FF;
+    --font-family: 'Roboto', sans-serif;
+}
+/* --- Estilos para os Inputs de Nome --- */
+.player-card input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #444;
+    color: var(--text-color);
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: var(--font-family);
+    width: 100%;
+    padding: 0.5rem 0.2rem;
+    margin-top: 0.5rem;
+    transition: border-color 0.3s;
+}
+
+.player-card input:focus {
+    outline: none;
+    border-bottom-color: var(--primary-color);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.dashboard-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+header h1 {
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+}
+
+.col-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* --- Botões de Controle --- */
+.control-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.control-buttons button {
+    background-color: var(--card-bg-color);
+    color: var(--text-color);
+    border: 1px solid #333;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.control-buttons button:hover {
+    background-color: #2a2b3a;
+}
+.control-buttons button:active {
+    transform: scale(0.98);
+}
+
+/* --- Informações do Player --- */
+.player-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.player-card {
+    background-color: var(--card-bg-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.player-card p {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.player-card h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+/* --- Painéis de Concentração --- */
+.concentration-panels {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.concentration-card {
+    background-color: var(--card-bg-color);
+    border-radius: 8px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 200px;
+}
+.concentration-card h3 {
+    font-weight: 500;
+}
+.concentration-value {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    color: var(--primary-color);
+}
+
+/* --- Coluna Direita --- */
+.col-right {
+    background-color: var(--card-bg-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* --- Voltas --- */
+.laps-container {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.lap-counter p {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 0.5rem;
+}
+
+.lap-counter span {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* --- Ranking --- */
+.leaderboard table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.leaderboard th, .leaderboard td {
+    text-align: left;
+    padding: 0.75rem 1rem;
+}
+
+.leaderboard thead {
+    font-size: 0.8rem;
+    color: #aaa;
+    text-transform: uppercase;
+}
+
+.leaderboard tbody tr:nth-child(odd) {
+    background-color: #2a2b3a;
+}
+
+.leaderboard td:first-child {
+    font-weight: bold;
+    width: 20%;
+}
+
+.leaderboard td:nth-child(2) {
+    font-weight: bold;
+    width: 50%;
+}
+
+.leaderboard td:last-child {
+    font-family: monospace;
+    font-size: 1.1rem;
+}
